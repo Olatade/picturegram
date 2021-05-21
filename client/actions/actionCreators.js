@@ -1,3 +1,5 @@
+// an action is an object that contains information about what happened and what needs to change
+
 // increment likes
 /**
  *
