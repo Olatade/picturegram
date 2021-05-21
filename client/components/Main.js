@@ -8,6 +8,8 @@ const Main = React.createClass({
         <h1>
           <Link to="/">Picturegram</Link>
         </h1>
+        {/* take any props coming down from the parent component and pass them along to photogrid or single grid */}
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   },
