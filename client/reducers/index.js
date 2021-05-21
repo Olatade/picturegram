@@ -8,6 +8,6 @@ import comments from './comments';
 
 
 // passing routing because we want to pass the changes in the url
-const rootReducer = combineReducers({posts, comments, router: routerReducer });
+const rootReducer = combineReducers({posts, comments, routing: routerReducer });
 
 export default rootReducer;

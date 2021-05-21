@@ -4,12 +4,12 @@ import { browserHistory} from 'react-router';
 
 
 // import the root reducer
-import rootReducer from './reducers/index';
-import comments from './data/comments';
-import posts from './data/comments';
+import rootReducer from './reducers/index'; // a file that merges all the reducers in the reducers folder together
+import comments from './data/comments'; // comments supposed to be from api
+import posts from './data/posts'; // posts supposed to be from api
 
 // create an object for the default data
-const defaultStore = {
+const defaultState = {
   posts,
   comments
 };

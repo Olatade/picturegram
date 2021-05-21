@@ -13,4 +13,4 @@ function comments(state = [], action ){
   return state;
 }
 
-export default posts;
+export default comments;
