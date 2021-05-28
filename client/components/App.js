@@ -30,6 +30,6 @@ function mapDispatchToProps(dispatch){
  * and surface those data in the functions via pros in our component
  */
 // Take regular Main component and add (all of the data and props from stateToProps), (all of our action creators from dispatchToProps)
-const App = connect(mapStateToProps, matchDispatchToProps)(Main); 
+const App = connect(mapStateToProps, mapDispatchToProps)(Main); 
 
 export default App;
