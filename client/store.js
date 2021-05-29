@@ -22,4 +22,13 @@ const store = createStore(rootReducer, defaultState);
 // we are kind of introducing the store to the browser history so that we can use the data in ( history={browserHistory} <- found in reduxstagram.js)
 export const history = syncHistoryWithStore(browserHistory, store);
 
+// allowing hot reload of reducers
+if(module.hot){
+  module.hot.accept('./reducers/', () => {
+    // using require because you cannot use an ES6 import statement inside a function
+    const nextRootReducer = require('./reducers/index').default
+    store.replaceReducer(nextRootReducer);
+  })
+}
+
 export default store;
