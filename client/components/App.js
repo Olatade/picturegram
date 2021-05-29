@@ -15,7 +15,7 @@ import Main from './Main';
 function mapStateToProps(state){
   return{
     posts: state.posts,
-    Comments: state.comments
+    comments: state.comments
   }
 }
 
