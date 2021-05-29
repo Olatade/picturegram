@@ -9,8 +9,6 @@
 
 // set state to empty
 function comments(state = [], action ){
-  console.log("The post wll change");
-  console.log(state, action);
   return state;
 }
 

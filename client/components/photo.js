@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
@@ -22,6 +21,8 @@ const Photo = React.createClass({
         <figcaption>
           <p>{post.caption}</p>
           <div className="control-buttons">
+            {/* onclick will run on page load which is not what we want */}
+            {/* what we are doing is passing an argument to the onClick function. A way is to add .bind(null, {the parameter})  */}
             <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {post.likes}</button>
             <Link className="button" to={`/view/${post.code}`}>
               <span className="comment-count">
