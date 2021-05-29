@@ -38,7 +38,7 @@ logException(new Error('download failed'), {
 Raven.captureMessage('something bad happened');
 
 //showing a report dialog
-Raven.showReportDialog();
+// Raven.showReportDialog();
 
 // console.log(window.doesNotExist.nope);
 

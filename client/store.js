@@ -14,9 +14,16 @@ const defaultState = {
   comments
 };
 
+//enable redux dev tools
+const enhancers = compose(
+  //check for the dev tools extension otherwise return the store
+  window.devToolsExtension ? window.devToolsExtension(): f => f
+);
+
+
 // root reducer is how we are goint to interface with the store
 // default state state is the first data that is loaded
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState, enhancers); // add enhancers to the store
 
 // when you go from page to page with react router, browser history keeps track of where you have gone
 // we are kind of introducing the store to the browser history so that we can use the data in ( history={browserHistory} <- found in reduxstagram.js)
